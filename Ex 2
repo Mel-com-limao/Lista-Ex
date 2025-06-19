@@ -1,0 +1,29 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <form name =  "formulario">
+        numero: <input type="text "name = "numero"><br/>
+        <input type = "button" value = "Ver tabuada"
+        onclick="Tabuada()">
+    </form>
+    <script src = "Tabuada.js"></script>
+</body>
+</html>
+
+JS:
+
+function Tabuada(){
+    numero = parseInt(document.formulario.numero.value);
+    for (let i = 1; i <= 10; i++) {
+        tabuada = numero*i
+        alert(`${numero} x ${i} = ${tabuada}`)
+      };
+    return tabuada
+}
