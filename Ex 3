@@ -1,0 +1,35 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3</title>
+</head>
+<body>
+    <h1> Contador </h1>
+    <h1>
+    <div id="valor">0</div>
+    <button onclick="alterarValor(-1)">- Diminuir</button>
+    <button onclick="alterarValor(1)">+ Aumentar</button>
+    </h1>
+    <script src="Ex3Lista.js"> </script>
+</body>
+</html>
+
+JS:
+
+let contador = 0;
+
+function atualizarTela() {
+    document.getElementById('valor').textContent = contador;
+}
+
+function alterarValor(delta) {
+    contador += delta;
+    atualizarTela();
+}
+
+document.getElementById('aumentar').addEventListener('click', () => alterarValor(1));
+document.getElementById('diminuir').addEventListener('click', () => alterarValor(-1));
