@@ -1,1 +1,26 @@
-# Lista-Ex
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar?</title>
+</head>
+<body>
+    <form name="formulario">
+    Digite um número: <input type="text" name="opcao">
+    <input type="button" value="Verificar"
+    onclick="ParImpar()">
+    </form>
+    <script src="ParImpar.js"> </script>
+</body>
+</html>
+
+function ParImpar(){
+    opcao = parseInt(document.formulario.opcao.value)
+    if (opcao%2==0){
+        alert("O número digitado é par")
+    }else{
+        alert("O número digitado é ímpar")
+    }
+}
+ParImpar
