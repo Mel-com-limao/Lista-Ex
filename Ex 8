@@ -1,0 +1,45 @@
+HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex 8</title>
+</head>
+<body>
+	  <form name =  "formulario">
+	      nome: <input type="text "name = "nome"><br/>
+        email: <input type="text "name = "email"><br/>
+        assunto: <input type="text "name = "assunto"><br/>
+        mensagem: <input type="text "name = "mensagem"><br/>
+        <input type = "button" value = "Enviar"
+        onclick="Envio()">
+    </form>
+    <script src="Ex8.js"></script>
+</body>
+
+JS:
+
+function Envio() {
+  var nome = document.formulario.nome.value.trim();
+  var email = document.formulario.email.value.trim();
+  var assunto = document.formulario.assunto.value.trim();
+  var mensagem = document.formulario.mensagem.value.trim();
+  
+  // Verificar se algum campo está vazio
+  if (nome === "" || email === "" || assunto === "" || mensagem === "") {
+    alert("Por favor, preencha todos os campos!");
+    return;
+  }
+  
+  // Validação básica de e-mail
+  var emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!emailValido) {
+    alert("Por favor, insira um e-mail válido.");
+    return;
+  }
+  
+  // Se tudo estiver certo
+  alert("Envio realizado com sucesso!");
+}
