@@ -1,0 +1,27 @@
+HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex 7</title>
+</head>
+<body>
+	  <form name =  "formulario">
+	      nome: <input type="text "name = "nome"><br/>
+        email: <input type="text "name = "email"><br/>
+        assunto: <input type="text "name = "assunto"><br/>
+        mensagem: <input type="text "name = "mensagem"><br/>
+        <input type = "button" value = "Enviar"
+        onclick="Envio()">
+    </form>
+    <script src="Ex7.js"></script>
+</body>
+
+JS:
+
+function Envio() {
+  alert("Envio realizado!")
+}
+Envio
