@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex 9</title>
+  <link rel="stylesheet" href="style9.css"> 
+</head>
+<body>
+
+  <button onclick="mudarCor()">Clique para mudar a cor</button>
+
+  <script src="Ex 9.js"></script> 
+</html>
+
+js:
+
+function mudarCor() {
+  const corAleatoria = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  document.body.style.backgroundColor = corAleatoria;
+}
