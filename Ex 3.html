@@ -1,5 +1,3 @@
-HTML:
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,19 +15,3 @@ HTML:
     <script src="Ex3Lista.js"> </script>
 </body>
 </html>
-
-JS:
-
-let contador = 0;
-
-function atualizarTela() {
-    document.getElementById('valor').textContent = contador;
-}
-
-function alterarValor(delta) {
-    contador += delta;
-    atualizarTela();
-}
-
-document.getElementById('aumentar').addEventListener('click', () => alterarValor(1));
-document.getElementById('diminuir').addEventListener('click', () => alterarValor(-1));
